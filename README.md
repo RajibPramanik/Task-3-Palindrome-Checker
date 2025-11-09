@@ -1,46 +1,32 @@
 # Task-3-Palindrome-Checker
 
-## Description
-This is a simple Java program that checks if a given string is a **palindrome**. The program ignores spaces, punctuation, and letter case when performing the check.
+## 📝 Description
+This Java program checks whether a given string is a **palindrome**.  
+A palindrome is a word that reads the same forward and backward (e.g., "madam", "level").  
+The program reverses the string, compares it with the original, and prints whether it’s a palindrome or not.
 
-## Features
-- Case-insensitive comparison
-- Ignores non-alphanumeric characters (spaces, punctuation)
-- Checks if a string is the same forwards and backwards
+---
 
-## How to Run
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/palindrome-checker.git
-````
+## ✨ Features
+- Reverses any given string.
+- Compares original and reversed strings.
+- Prints whether the string is a palindrome.
+- Uses simple logic for easy understanding.
 
-2. Navigate into the project folder:
+---
 
-   ```bash
-   cd palindrome-checker
-   ```
+## 🧰 Tools Used
+- **Java (JDK 8 or above)**
+- **VS Code / IntelliJ / Eclipse**
+- **Command Prompt / Terminal**
 
-3. Compile and run the program:
+---
 
-   ```bash
-   javac PalindromeChecker.java
-   java PalindromeChecker
-   ```
-
-## Example Output
-
+## 🧪 Sample Output
 ```
-String: "madam"
-Result: Palindrome.
 
-String: "Hello"
-Result: Not a palindrome.
-
-String: "A man, a plan, a canal: Panama"
-Result: Palindrome (Ignoring spaces and punctuation).
-
-String: "No 'x' in Nixon"
-Result: Palindrome (Ignoring spaces and punctuation).
-```
+madam is a palindrome.
+hello is not a palindrome.
+whether is not a palindrome.
 
 

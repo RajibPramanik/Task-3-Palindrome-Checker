@@ -1,46 +1,30 @@
 public class PalindromeChecker {
 
-    // Method to check if a string is a palindrome
-    public static boolean isPalindrome(String str) {
-        // Remove all non-alphanumeric characters and convert to lowercase
-        // This ensures we're comparing only letters and numbers, and case doesn't matter
-        String cleanedStr = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+    public static void main(String[] args) {
 
-        // Reverse the cleaned string using StringBuilder
-        String reversedStr = new StringBuilder(cleanedStr).reverse().toString();
+        String str1 = "madam";
+        String str2 = "hello";
+        String str3 = "whether";
 
-        // Compare the cleaned string with its reversed version
-        return cleanedStr.equals(reversedStr);
+        checkPalindrome(str1);
+        checkPalindrome(str2);
+        checkPalindrome(str3);
     }
 
-    public static void main(String[] args) {
-        // Test cases to check different strings
-        String testCase1 = "madam";  // Palindrome example
-        String testCase2 = "Hello";  // Non-palindrome example
-        String testCase3 = "A man, a plan, a canal: Panama"; // Palindrome with spaces and punctuation
-        String testCase4 = "No 'x' in Nixon"; // Palindrome with spaces and punctuation
+    // Method to check palindrome
+    public static void checkPalindrome(String str) {
+        String reversed = "";
 
-        // Print the results for each test case
-        System.out.println("--- Palindrome Checker Results ---");
+        // Reverse the string
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversed += str.charAt(i);
+        }
 
-        // Check if testCase1 is a palindrome and print the result
-        System.out.println("String: \"" + testCase1 + "\"");
-        System.out.println("Result: " + (isPalindrome(testCase1) ? "Palindrome." : "Not a palindrome."));
-        System.out.println("----------------------------------");
-
-        // Check if testCase2 is a palindrome and print the result
-        System.out.println("String: \"" + testCase2 + "\"");
-        System.out.println("Result: " + (isPalindrome(testCase2) ? "Palindrome." : "Not a palindrome."));
-        System.out.println("----------------------------------");
-
-        // Check if testCase3 is a palindrome and print the result
-        System.out.println("String: \"" + testCase3 + "\"");
-        System.out.println("Result: " + (isPalindrome(testCase3) ? "Palindrome (Ignoring spaces and punctuation)." : "Not a palindrome."));
-        System.out.println("----------------------------------");
-
-        // Check if testCase4 is a palindrome and print the result
-        System.out.println("String: \"" + testCase4 + "\"");
-        System.out.println("Result: " + (isPalindrome(testCase4) ? "Palindrome (Ignoring spaces and punctuation)." : "Not a palindrome."));
-        System.out.println("----------------------------------");
+        // Compare original and reversed
+        if (str.equalsIgnoreCase(reversed)) {
+            System.out.println(str + " is a palindrome.");
+        } else {
+            System.out.println(str + " is not a palindrome.");
+        }
     }
 }
